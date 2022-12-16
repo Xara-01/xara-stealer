@@ -25,22 +25,22 @@
 -----
 
 <p align="center">
-<img src="https://cdn.discordapp.com/attachments/972965986766557215/1047523718911512576/image.png", width="500", height="250">
+<img src="https://cdn.discordapp.com/attachments/972965986766557215/1053249766512939068/image.png", width="500", height="250">
 </p>
 
 -----
 
 <p align="center">
-<img src="https://cdn.discordapp.com/attachments/972965986766557215/1047523882120257596/image.png", width="500", height="250">
+<img src="https://cdn.discordapp.com/attachments/972965986766557215/1053249793339707442/image.png", width="500", height="250">
 </p>
 
 -----
 
 <p align="center">
-<img src="https://cdn.discordapp.com/attachments/972965986766557215/1047524117861118013/image.png", width="500", height="250">
+<img src="https://cdn.discordapp.com/attachments/972965986766557215/1053249811157102644/image.png", width="500", height="250">
 </p>
 
 </p>
 
 
-### <p align="center">> xara ~$#3123</p>
+### <p align="center">> xara ~$#0001</p>
